@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>loop-studio-site</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="npm install --save-dev @iconify/tailwind4"></script>
+    <!-- <script src="npm install --save-dev @iconify/tailwind4"></script> -->
 
 
     <!-- <style>
@@ -38,7 +38,7 @@
         <div
             class=" flex md:items-center lg:items-start  w-full h-[100vh] bg-[url(/images/mobile/image-hero.jpg)] lg:bg-[url(/images/image-hero.jpg)] flex bg-cover bg-center bg-no-repeat flex-col  justify-between items-start py-15 pb-30">
 
-            <div class="w-full px-4 md:px-5 lg:px-0 lg:w-10/12 mx-auto space-y-30 sm:space-y-20 md:space-y-30 lg:space-y-50 ">
+            <div class="w-full px-4 md:px-5 lg:px-0 lg:w-10/12 mx-auto space-y-10 md:space-y-30 lg:space-y-40 ">
                 <!-- nav bar -->
                 <nav class=" block w-full flex  justify-between items-center  ">
                     <div>
@@ -59,13 +59,18 @@
                         </ul>
                     </div>
                     <div class="block md:block lg:hidden ">
-                        <div class="text-white text-3xl h-full md:block lg:hidden cursor-pointer ">
+                        <div class="text-white text-3xl h-full md:block lg:hidden cursor-pointer" id="menu-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="size-9">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                               </svg>
                               
                         </div>
-                        <div class="text-white text-3xl h-full hidden cursor-pointer px-3 ">X</div>
+                        <div class="text-white text-3xl h-full hidden cursor-pointer px-3" id="cancel-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor" class="size-9">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                              </svg>
+                              
+                        </div>
                     </div>
 
                 </nav>
@@ -97,7 +102,7 @@
                     <span>The leader in</span>
                     <span>interactive VR</span>
                 </h1>
-                <p class=" block items- justify- text-gray-400 font-semibold">
+                <p class=" block items- justify- text-gray-400 font-normal md:font-semibold lg:font-semibold ">
                     <span>Founded in 2011, Loopstudios has been</span>
                     <span>producing world-class virtual reality projects</span>
                     <span>for some of the best companies around the</span>
@@ -199,10 +204,12 @@
 
             <!-- See-All button -->
             <div class="  lg:hidden text-center pb-10">
-                <button
+               <a href="#">
+                 <button
                     class="uppercase text-sm bg-transparent font-semibold tracking-wider border-1 px-9 py-2 hover:bg-black hover:text-[#fff] hover:animate-[pulse_0.5s_ease-in-out_1] cursor-pointer">
                     see all
                 </button>
+               </a>
             </div>
 
         </div>
@@ -210,8 +217,8 @@
 
         
         <!-- footer -->
-        <footer>
-            <div class="w-full px-43 py-15 bg-black ">
+        <footer class="py-15 bg-black">
+            <div class="w-full px-4 md:px-5 lg:px-0 lg:w-10/12 mx-auto flex flex-col items-center lg:items-stretch space-y-5 lg:space-y-0">
 
                 <div class="flex justify-start">
                     <img src="/images/logo.svg" alt="">
@@ -220,23 +227,42 @@
                 <div class="py-5 text-[#fff]">
                     <ul class="flex justify-end space-x-5 ">
                         <a href="#">
-                            <li>FACEBOOK</li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                                    <path fill="#fff" fill-rule="evenodd" d="M15.725 22v-7.745h2.6l.389-3.018h-2.99V9.31c0-.874.243-1.47 1.497-1.47h1.598v-2.7a21 21 0 0 0-2.33-.12c-2.304 0-3.881 1.407-3.881 3.99v2.227H10v3.018h2.607V22H3.104C2.494 22 2 21.506 2 20.896V3.104C2 2.494 2.494 2 3.104 2h17.792C21.506 2 22 2.494 22 3.104v17.792c0 .61-.494 1.104-1.104 1.104z" />
+                                </svg>
+                            </li>
                         </a>
+
                         <a href="#">
-                            <li>X</li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 1200 1200">
+                                    <path fill="#fff" d="M1200 216.995q-12.04 25.42-44.816 64.214c-32.776 38.794-48.828 48.606-80.937 68.227q1.34 10.703 2.007 20.067c3.463 96.12-19.561 195.847-51.505 278.93c-61.918 154.473-156.795 278.795-292.308 363.21c-141.314 81.058-305.892 98.298-457.525 83.612C174.25 1083.694 75.033 1050.822 0 988.901c137.233 16.404 265.305-30.28 366.555-105.687c-112.472 2.847-194.191-78.514-232.775-172.575c17.393 4.559 35.588 4.009 52.174 2.677c20.416-1.918 39.796-3.833 58.863-8.026c-71.717-23.139-134.469-65.675-167.224-129.767c-19.213-40.61-27.888-79.282-28.093-123.077c33.605 17.693 74.028 34.937 111.037 33.444c-55.892-47.347-100.7-107.857-109.03-177.258c-5.259-57.866 9.221-110.688 30.101-159.866c83.607 91.885 177.415 167.502 285.618 214.047c73.998 30.302 147.786 46.507 224.081 46.822c-8.807-68.145-1.959-134.05 30.101-189.967c37.73-60.118 92.778-94.998 154.516-112.375c88.337-22.652 174.496 9.345 228.763 70.903c58.521-6.321 114.58-32.283 159.197-58.863c-18.958 57.41-55.874 114.492-109.699 141.806c51.247-9.488 100.149-24.659 145.815-44.144" />
+                                </svg>
+                            </li>
                         </a>
+
                         <a href="#">
-                            <li>PINTEREST</li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 256">
+                                    <path fill="#fff" d="M0 128.002c0 52.414 31.518 97.442 76.619 117.239c-.36-8.938-.064-19.668 2.228-29.393c2.461-10.391 16.47-69.748 16.47-69.748s-4.089-8.173-4.089-20.252c0-18.969 10.994-33.136 24.686-33.136c11.643 0 17.268 8.745 17.268 19.217c0 11.704-7.465 29.211-11.304 45.426c-3.207 13.578 6.808 24.653 20.203 24.653c24.252 0 40.586-31.149 40.586-68.055c0-28.054-18.895-49.052-53.262-49.052c-38.828 0-63.017 28.956-63.017 61.3c0 11.152 3.288 19.016 8.438 25.106c2.368 2.797 2.697 3.922 1.84 7.134c-.614 2.355-2.024 8.025-2.608 10.272c-.852 3.242-3.479 4.401-6.409 3.204c-17.884-7.301-26.213-26.886-26.213-48.902c0-36.361 30.666-79.961 91.482-79.961c48.87 0 81.035 35.364 81.035 73.325c0 50.213-27.916 87.726-69.066 87.726c-13.819 0-26.818-7.47-31.271-15.955c0 0-7.431 29.492-9.005 35.187c-2.714 9.869-8.026 19.733-12.883 27.421a127.9 127.9 0 0 0 36.277 5.249c70.684 0 127.996-57.309 127.996-128.005C256.001 57.309 198.689 0 128.005 0C57.314 0 0 57.309 0 128.002" />
+                                </svg>
+                            </li>
                         </a>
+
                         <a href="#">
-                            <li>INSTAGRAM</li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 256 256">
+                                    <path fill="#fff" d="M0 128.002c0 52.414 31.518 97.442 76.619 117.239c-.36-8.938-.064-19.668 2.228-29.393c2.461-10.391 16.47-69.748 16.47-69.748s-4.089-8.173-4.089-20.252c0-18.969 10.994-33.136 24.686-33.136c11.643 0 17.268 8.745 17.268 19.217c0 11.704-7.465 29.211-11.304 45.426c-3.207 13.578 6.808 24.653 20.203 24.653c24.252 0 40.586-31.149 40.586-68.055c0-28.054-18.895-49.052-53.262-49.052c-38.828 0-63.017 28.956-63.017 61.3c0 11.152 3.288 19.016 8.438 25.106c2.368 2.797 2.697 3.922 1.84 7.134c-.614 2.355-2.024 8.025-2.608 10.272c-.852 3.242-3.479 4.401-6.409 3.204c-17.884-7.301-26.213-26.886-26.213-48.902c0-36.361 30.666-79.961 91.482-79.961c48.87 0 81.035 35.364 81.035 73.325c0 50.213-27.916 87.726-69.066 87.726c-13.819 0-26.818-7.47-31.271-15.955c0 0-7.431 29.492-9.005 35.187c-2.714 9.869-8.026 19.733-12.883 27.421a127.9 127.9 0 0 0 36.277 5.249c70.684 0 127.996-57.309 127.996-128.005C256.001 57.309 198.689 0 128.005 0C57.314 0 0 57.309 0 128.002" />
+                                </svg>
+                            </li>
                         </a>
                     </ul>
                 </div>
 
-                <div class="hidden flex justify-between items-center py-5 text-[#fff] font-semibold">
+                <div class=" flex flex-col justify-between items-center py-5 text-[#fff] font-semibold space-y-7 md:space-y- lg:flex-row">
                     <div>
-                        <ul class="flex justify-between space-x-5">
+                        <ul class="flex flex-col justify-between items-center md:space-x-5 md:flex-row lg:space-x-5 lg:flex-row">
                             <li><a href="#">About</a></li>
                             <li><a href="#">Careers</a></li>
                             <li><a href="#">Events</a></li>
@@ -246,11 +272,11 @@
                     </div>
 
                     <div>
-                        <h3 class="text-gray-400 text-lg">© 2021 Loopstudios. All rights reserved.</h3>
+                        <h3 class="text-gray-400 text-sm">© 2021 Loopstudios. All rights reserved.</h3>
                     </div>
                 </div>
 
-                <div class="text-gray-500 text-cent pt-10 text-[13px] tracking-widest font-semibold">
+                <div class="text-gray-500 text-center pt-5 text-[13px] tracking-widest font-semibold">
                     <p>
                         Challenge completed by
                         <button class="cursor-pointer">
@@ -266,6 +292,8 @@
 
 
     </div>
+
+    <script src="sript.js"></script>
 </body>
 
 </html>
