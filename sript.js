@@ -5,5 +5,10 @@ var navlist = document.querySelector('#navbar-list')
 MenuButton.onclick = function() {
     MenuButton.style.display = 'none'
     CancelButton.style.display = 'block'
-    navlist.style.display = 'block'
+    navlist.style.display = 'none'
+}
+CancelButton.onclick = function() {
+    MenuButton.style.display = 'block'
+    CancelButton.style.display = 'none'
+    navlist.style.display = 'none'
 }
